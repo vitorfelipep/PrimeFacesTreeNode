@@ -37,9 +37,13 @@ public class ConsultaCategoriasBean implements Serializable {
 			TreeNode no = new DefaultTreeNode(categoria, pai);
 			
 			adicionarNos(categoria.getSubcategorias(), no);
+			TreeNode no2 = new DefaultTreeNode(categoria, no);
+			adicionarNos(categoria.getSubcategorias(), no2);
 		}
 	}
-
+	
+	
+	
 	public TreeNode getRaiz() {
 		return raiz;
 	}
